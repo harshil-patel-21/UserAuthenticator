@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import morgan from "morgan";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoute.js";
+import { loginController, registerController } from "./controllers/authController.js";
 
 
 //configure env
@@ -26,6 +27,9 @@ app.use("/api/v1/auth", authRoutes);
 app.get('/', (req, res)=>{
     res.send("<h1>Harshil Patel</h1>")
 });
+
+app.get('/login', loginController);
+app.post('/register', registerController);
 
 
 //PORT
