@@ -24,7 +24,7 @@ app.use("/api/v1/auth", authRoutes);
 
 //rest api
 app.get('/', (req, res)=>{
-    res.send("<h1>welcome to authentication</h1>")
+    res.send("<h1>Harshil Patel</h1>")
 });
 
 
